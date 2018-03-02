@@ -39,6 +39,9 @@ body {
     background-size: cover;
     overflow: hidden;
 }
+#controls.error > .station {
+    background-image:url(../img/err.png) !important;
+}
 
 @keyframes loading {
     0%   {transform: rotateY(0deg);}
@@ -92,7 +95,7 @@ body {
     height: 100px;
     background-size: cover;
     background-position: center center;
-    border-radius:10px;    
+    border-radius:10px;
 }
 .anim {
     position:fixed;
@@ -100,8 +103,8 @@ body {
     height: 100px;
     background-size: cover;
     background-position: center center;
-    border-radius:10px;  
-    z-index:999; 
+    border-radius:10px;
+    z-index:999;
 }
 
 @media screen and (max-width: 700px) {
@@ -112,6 +115,3 @@ body {
         width: calc( 100% - 155px );
     }
 }
-
-
-
