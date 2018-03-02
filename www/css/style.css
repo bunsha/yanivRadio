@@ -39,6 +39,9 @@ body {
     background-size: cover;
     overflow: hidden;
 }
+#controls.error > .station {
+    background-image:url(../img/err.png) !important;
+}
 
 @keyframes loading {
     0%   {transform: rotateY(0deg);}
@@ -48,7 +51,7 @@ body {
     animation: loading 3s infinite linear;
 }
 #controls.loading > .station > div:after {
-    content: "טוען";
+    content: "ЧЧ•ЧўЧџ";
     text-align: center;
     font-size: 25px;
     display: block;
@@ -75,8 +78,14 @@ body {
     overflow: hidden;
     direction: rtl;
     text-align: left;
-    text-overflow: ellipsis;
+    /* text-overflow: ellipsis; */
 }
+#controls > .text > span {
+    display: inline-block;
+    animation: marquee 8s infinite linear;
+}
+
+
 #boxes {
     position: relative;
     display: flex;
@@ -92,7 +101,7 @@ body {
     height: 100px;
     background-size: cover;
     background-position: center center;
-    border-radius:10px;    
+    border-radius:10px;
 }
 .anim {
     position:fixed;
@@ -100,8 +109,8 @@ body {
     height: 100px;
     background-size: cover;
     background-position: center center;
-    border-radius:10px;  
-    z-index:999; 
+    border-radius:10px;
+    z-index:999;
 }
 
 @media screen and (max-width: 700px) {
