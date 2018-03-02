@@ -78,8 +78,14 @@ body {
     overflow: hidden;
     direction: rtl;
     text-align: left;
-    text-overflow: ellipsis;
+    /* text-overflow: ellipsis; */
 }
+#controls > .text > span {
+    display: inline-block;
+    animation: marquee 8s infinite linear;
+}
+
+
 #boxes {
     position: relative;
     display: flex;

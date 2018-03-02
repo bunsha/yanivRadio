@@ -34,7 +34,22 @@ function boxclick(obj) {
             $('#controls > .station').css('background-image', bg);
             $(this).remove();
             $current = obj;
-            $('#controls p').text(stations[sid][1]);
+            $('#controls > p > span').text(stations[sid][1]);
+            var diff  = $('#controls > p > span').width() - $('#controls > p').width();
+            if(diff>0) {
+                console.log(diff);
+                $('#marquee').html(`
+                    @keyframes marquee {
+                        15%   {transform: translateX(0); }
+                        40% {transform: translateX(${diff}px); }
+                        60% {transform: translateX(${diff}px); }
+                        85% {transform: translateX(0); }
+                    }
+                `);
+            }
+            else {
+                $('#marquee').empty();
+            }
             audio.src = stations[sid][2];
             audio.play();
         });
