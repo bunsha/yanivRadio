@@ -6,15 +6,9 @@ body {
     font:14px arial;
     background-color:#000
 }
-#dbg {
-    position:fixed;
-    left:0;
-    bottom:0;
-    background-color:red;
-    color:#fff;
-    padding:10px;
-    font-size:20px;
-    z-index: 999;
+.sortable-placeholder {
+    border:5px dashed yellow;
+    box-sizing:border-box;
 }
 #controls {
     position: fixed;
@@ -51,7 +45,7 @@ body {
     animation: loading 3s infinite linear;
 }
 #controls.loading > .station > div:after {
-    content: "ЧЧ•ЧўЧџ";
+    content: "טוען";
     text-align: center;
     font-size: 25px;
     display: block;
@@ -80,7 +74,7 @@ body {
     text-align: left;
     /* text-overflow: ellipsis; */
 }
-#controls > .text > span {
+#controls > .text > span {    
     display: inline-block;
     animation: marquee 8s infinite linear;
 }
@@ -92,8 +86,9 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     margin: 110px 5px 110px 5px;
+    list-style-type: none;
 }
-#boxes > div {
+#boxes > li {
     position: relative;
     float: left;
     margin:5px;
@@ -101,7 +96,7 @@ body {
     height: 100px;
     background-size: cover;
     background-position: center center;
-    border-radius:10px;
+    border-radius:10px;    
 }
 .anim {
     position:fixed;
@@ -109,8 +104,8 @@ body {
     height: 100px;
     background-size: cover;
     background-position: center center;
-    border-radius:10px;
-    z-index:999;
+    border-radius:10px;  
+    z-index:999; 
 }
 
 @media screen and (max-width: 700px) {

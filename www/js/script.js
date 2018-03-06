@@ -1,25 +1,27 @@
 var audio = new Audio();
 var $ctr = $('#boxes');
-var $current = null;
+var current = null;
 var status = null;
 initAudioEvents();
 loadView();
 initPlayEvents();
 
-function initPlayEvents() {
-    $('>div', $ctr).on('click', function () {
-        boxclick($(this));
-    });
-    $('#controls > .topause').on('click', function () {
-        pause();
-    });
+function pause() {
+    if(status && status != 'error') {
+        if (status == 'pause') {
+            audio.play();
+        }
+        else {
+            audio.pause();
+        }
+    }
 }
 
 function boxclick(obj) {
-    if ($current==null ||  $current[0] != obj[0] || status != 'playing') {
-        var pos = obj[0].getBoundingClientRect();
-        var sid = $(obj).data('sid');
-        var bg = 'url(img/st/' + stations[sid][0] + '.jpg)';
+    var sid = $(obj).attr('id');
+    if (current==null || current != sid || status != 'playing') {
+        var pos = obj[0].getBoundingClientRect();        
+        var bg = 'url(img/st/' + sid + '.jpg)';
         $('<div class="anim"></div>').css({
             "top": pos.top + "px",
             "left": pos.left + "px",
@@ -33,11 +35,11 @@ function boxclick(obj) {
         }, 300, function (e) {
             $('#controls > .station').css('background-image', bg);
             $(this).remove();
-            $current = obj;
-            $('#controls > p > span').text(stations[sid][1]);
+            current = sid;
+            $('#controls > p > span').text(stations[sid][0]);
             var diff  = $('#controls > p > span').width() - $('#controls > p').width();
             if(diff>0) {
-                console.log(diff);
+                //console.log(diff);
                 $('#marquee').html(`
                     @keyframes marquee {
                         15%   {transform: translateX(0); }
@@ -50,41 +52,56 @@ function boxclick(obj) {
             else {
                 $('#marquee').empty();
             }
-            audio.src = stations[sid][2];
+            audio.src = stations[sid][1];
             audio.play();
         });
     }
 }
 
-function pause() {
-    if(status && status != 'error') {
-        if (status == 'pause') {
-            audio.play();
+function setOrder() {
+    var order = [];
+    $('#boxes > li').each(function(i,o) {
+        order.push($(o).attr('id'));
+    });    
+    localStorage.setItem("stationsOrder",JSON.stringify(order));
+    //console.log("NEW ORDER:\n",order.join(','));        
+}
+
+function initPlayEvents() {
+    $ctr.sortable({
+        tolerance: "pointer",
+        placeholder: "sortable-placeholder",
+        update: function() {
+            setOrder();
         }
-        else {
-            audio.pause();
-        }
-    }
+    });
+    $('>li', $ctr).on('click', function () {
+        boxclick($(this));
+    });
+    $('#controls > .topause').on('click', function () {
+        pause();
+    });
+}
+
+function addBox(sid) {
+    $ctr.append('<li id="' + sid + '" style="background-image:url(img/st/' + sid + '.jpg)"></li>');
 }
 
 function loadView() {
-    for (var i = 0; i < stations.length; i++) {
-        addBox(i, stations[i][0]);
+    var orderstr = localStorage.getItem("stationsOrder");
+    if(orderstr) {
+        var order = JSON.parse(orderstr);
+        //console.log("LOAD FROM ORDER:\n",order.join(',')); 
+        for (var i = 0; i < order.length; i++) {
+            addBox(order[i]);
+        }
     }
-}
-
-function addBox(index, img) {
-    $ctr.append('<div id="s' + index + '" data-sid="' + index + '" style="background-image:url(img/st/' + img + '.jpg)">');
-}
-
-function initAudioEvents() {
-    //['abort','canplay','canplaythrough','durationchange','emptied','ended','error','loadeddata','loadedmetadata','loadstart','pause','play','playing','progress','ratechange','seeked','seeking','stalled','suspend','timeupdate','volumechange','waiting']
-    ['play', 'loadstart', 'waiting', 'stalled', 'playing', 'pause', 'error']
-        .map(function (evt) {
-            audio.addEventListener(evt, function (e) {
-                eventFire(e.type);
-            });
-        });
+    else {
+        //console.log("NORMAL ORDER"); 
+        for (var sid in stations) {
+            addBox(sid);
+        }
+    }
 }
 
 function eventFire(evt) {
@@ -101,7 +118,7 @@ function eventFire(evt) {
             break;
         case 'playing':
         case 'pause':
-        case 'error': // do this in case error: $('#controls').removeClass().addClass('error');
+        case 'error': 
             st = evt;
     }
     if (st) {
@@ -111,3 +128,31 @@ function eventFire(evt) {
     }
     //console.log(dbg);
 }
+
+function initAudioEvents() {
+    //['abort','canplay','canplaythrough','durationchange','emptied','ended','error','loadeddata','loadedmetadata','loadstart','pause','play','playing','progress','ratechange','seeked','seeking','stalled','suspend','timeupdate','volumechange','waiting']
+    ['play', 'loadstart', 'waiting', 'stalled', 'playing', 'pause', 'error']
+    .map(function (evt) {
+        audio.addEventListener(evt, function (e) {
+            eventFire(e.type);
+        });
+    });
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
