@@ -2,80 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7f04ff90-f609-4466-978b-01eaa7356668" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s1.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s10.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s11.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s12.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s13.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s14.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s15.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s16.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s17.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s18.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s19.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s2.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s20.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s21.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s22.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s23.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s24.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s25.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s26.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s27.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s28.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s29.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s3.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s30.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s31.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s32.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s33.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s34.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s35.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s36.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s37.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s38.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s39.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s4.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s40.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s41.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s42.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s43.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s44.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s45.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s46.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s47.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s48.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s49.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s5.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s50.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s51.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s52.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s53.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s54.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s55.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s56.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s57.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s58.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s59.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s6.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s60.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s61.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s62.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s63.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s64.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s65.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s66.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s67.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s68.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s69.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s7.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s70.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s71.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s72.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s73.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s74.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s8.jpg" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/www/img/st/s9.jpg" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -248,28 +174,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="img" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="st" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yanivStreamingApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="yanivStreamingApp" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="www" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="css" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -389,7 +293,7 @@
       <workItem from="1519933122857" duration="1860000" />
       <workItem from="1519988527795" duration="3439000" />
       <workItem from="1520332802468" duration="969000" />
-      <workItem from="1520336240682" duration="412000" />
+      <workItem from="1520336240682" duration="460000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1519934341515</created>
@@ -496,11 +400,18 @@
       <option name="project" value="LOCAL" />
       <updated>1520336303584</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="06.03 rebuild">
+      <created>1520336655814</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1520336655814</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="6680000" />
+    <option name="totallyTimeSpent" value="6728000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
