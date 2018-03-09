@@ -2,6 +2,9 @@ var audio = new Audio();
 var $ctr = $('#boxes');
 var current = null;
 var status = null;
+var timer = null;
+var sortflag = false;
+var err = 0;
 initAudioEvents();
 loadView();
 initPlayEvents();
@@ -53,7 +56,16 @@ function boxclick(obj) {
                 $('#marquee').empty();
             }
             audio.src = stations[sid][1];
-            audio.play();
+            var playPromise = audio.play();
+            playPromise.catch(function(error) { 
+                var e = ++err;  
+                //console.log('error',e);
+                setTimeout(function() {
+                    //console.log('fix',e);
+                    sortflag = false;
+                    $(obj).removeClass('selected');                    
+                },800);
+            });
         });
     }
 }
@@ -69,14 +81,45 @@ function setOrder() {
 
 function initPlayEvents() {
     $ctr.sortable({
+        disabled: true,
+        containment: 'parent',
         tolerance: "pointer",
-        placeholder: "sortable-placeholder",
+        placeholder: "sortable-placeholder",   
+        stop: function() {
+            //console.log('sortable stop',sortflag);
+            sortflag = false;
+        }, 
         update: function() {
+            //console.log('sortable update');
             setOrder();
-        }
+        }        
     });
-    $('>li', $ctr).on('click', function () {
+    $ctr.on('sortupdate', function () {
+        setOrder();
+        $ctr.sortable("disable");
+    });
+    $('>li', $ctr).on('taphold', function () {
+        //console.log('taphold before',sortflag);
+        if(sortflag)   {
+            //console.log('>> misfire');
+            sortflag = false;
+        }
+        else {            
+            //console.log('>> real');
+            $('>li', $ctr).removeClass('selected');
+            $ctr.sortable("enable");
+            $(this).addClass('selected');            
+        }        
+        //console.log('taphold after',sortflag);
+    });    
+    $('>li', $ctr).on('tap', function () {        
+        //console.log('tap',sortflag);
         boxclick($(this));
+    });
+    $('>li', $ctr).on('tapend', function () { 
+        sortflag = true;        
+        //console.log('tapend',sortflag);
+        $(this).removeClass('selected');
     });
     $('#controls > .topause').on('click', function () {
         pause();
