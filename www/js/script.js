@@ -57,15 +57,18 @@ function boxclick(obj) {
             }
             audio.src = stations[sid][1];
             var playPromise = audio.play();
-            playPromise.catch(function(error) { 
-                var e = ++err;  
-                //console.log('error',e);
-                setTimeout(function() {
-                    //console.log('fix',e);
-                    sortflag = false;
-                    $(obj).removeClass('selected');                    
-                },800);
-            });
+            if(playPromise){
+                playPromise.catch(function(error) {
+                    var e = ++err;
+                    //console.log('error',e);
+                    setTimeout(function() {
+                        //console.log('fix',e);
+                        sortflag = false;
+                        $(obj).removeClass('selected');
+                    },800);
+                });
+            }
+
         });
     }
 }
