@@ -43,14 +43,14 @@ function boxclick(obj) {
             var diff  = $('#controls > p > span').width() - $('#controls > p').width();
             if(diff>0) {
                 //console.log(diff);
-                $('#marquee').html(`
-                    @keyframes marquee {
-                        15%   {transform: translateX(0); }
-                        40% {transform: translateX(${diff}px); }
-                        60% {transform: translateX(${diff}px); }
-                        85% {transform: translateX(0); }
-                    }
-                `);
+                $('#marquee').html(
+                    '@keyframes marquee {'+
+                        '15%   {transform: translateX(0); }'+
+                        '40% {transform: translateX(${diff}px); }'+
+                        '60% {transform: translateX(${diff}px); }'+
+                        '85% {transform: translateX(0); }'+
+                    '}'
+                );
             }
             else {
                 $('#marquee').empty();
